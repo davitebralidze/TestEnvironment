@@ -32,10 +32,9 @@ public class stringRevert {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String input;
 
         System.out.println("Please enter a string");
-        input = scanner.nextLine();
+        String input = scanner.nextLine();
         StringBuilder reversedString = new StringBuilder();
 
 
