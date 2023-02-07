@@ -8,16 +8,14 @@ public class stringRevert {
 
         System.out.println("Please enter a string");
         String input = scanner.nextLine();
-        StringBuilder reversedString = new StringBuilder();
-
-
         char[] dividedString = input.toCharArray();
+        StringBuilder reversedString = new StringBuilder();
 
         for (int i = dividedString.length - 1; i >= 0; i--) {
             reversedString.append(dividedString[i]);
         }
 
-        System.out.println("Reversed version of your text is : " +reversedString);
+        System.out.println("Reversed version of your text is : " + reversedString);
 
     }
 }
