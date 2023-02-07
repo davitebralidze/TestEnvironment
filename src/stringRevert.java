@@ -45,7 +45,7 @@ public class stringRevert {
             reversedString.append(dividedString[i]);
         }
 
-        System.out.println("Reversed version of your text is: " +reversedString);
+        System.out.println("Reversed version of your text : " +reversedString);
 
     }
 }
