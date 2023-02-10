@@ -13,11 +13,7 @@ public class pyramidBuilder {
         }
         int nFloors = scr.nextInt();
 
-        System.out.println();
-
         preciseFloorBuilder(nFloors);
-
-
 
     }
 
@@ -32,11 +28,8 @@ public class pyramidBuilder {
             int preciseFloorSpaceAmount = spaceMax + (preciseFloor - 1) * (-1);
 
 
-            System.out.print("|");
-
-
             for (int i = 0; i < preciseFloorSpaceAmount; i++) {
-                System.out.print(" ");
+                System.out.print("-");
             }
 
             for (int k = 0; k < preciseFloorSignAmount; k++) {
@@ -44,10 +37,10 @@ public class pyramidBuilder {
             }
 
             for (int i = 0; i < preciseFloorSpaceAmount; i++) {
-                System.out.print(" ");
+                System.out.print("-");
             }
 
-            System.out.println("|");
+            System.out.println();
 
         }
 

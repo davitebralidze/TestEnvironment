@@ -16,6 +16,9 @@ public class sudokuSolver {
                 {5, 3, 2, 6, 1, 4, 8, 7, 9},
         };
 
+
+
+
         //height validation
         if (sudokuBoard.length != 9) {
             System.out.println("The 9x9 size format of the board is not met!" +
