@@ -5,8 +5,12 @@ public class pineBuilder {
     public static void main(String[] args) {
 
         Scanner scr = new Scanner(System.in);
-        System.out.println("Enter number of floors: ");
-        int nFloors = scr.nextInt();
+
+        System.out.println("Enter the height of the tree: ");
+        while (!scr.hasNextInt()) {
+            System.out.println("The height of the tree must be an integer. Please enter again: ");
+            scr.next();
+        } int nFloors = scr.nextInt();
 
         preciseFloorBuilder(nFloors);
 
