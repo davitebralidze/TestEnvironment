@@ -15,6 +15,7 @@ public class pineBuilder {
     public static void preciseFloorBuilder(int nFloors) {
 
         for (int preciseFloor = 1; preciseFloor <= nFloors; preciseFloor ++) {
+
             int lastLine = 1 + (nFloors - 1) * 2;
             int spaceMax = (lastLine - 1) / 2;
             int preciseFloorSignAmount = 1 + (preciseFloor - 1) * 2;
