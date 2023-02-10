@@ -31,6 +31,10 @@ public class pyramidBuilder {
             int preciseFloorSignAmount = 1 + (preciseFloor - 1) * 2;
             int preciseFloorSpaceAmount = spaceMax + (preciseFloor - 1) * (-1);
 
+
+            System.out.print("|");
+
+
             for (int i = 0; i < preciseFloorSpaceAmount; i++) {
                 System.out.print(" ");
             }
@@ -39,7 +43,11 @@ public class pyramidBuilder {
                 System.out.print("*");
             }
 
-            System.out.println();
+            for (int i = 0; i < preciseFloorSpaceAmount; i++) {
+                System.out.print(" ");
+            }
+
+            System.out.println("|");
 
         }
 
