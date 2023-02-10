@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class pineBuilder {
 
     public static void main(String[] args) {
-        //Write you scratch here:
-
 
         Scanner scr = new Scanner(System.in);
         System.out.println("Enter number of floors: ");
