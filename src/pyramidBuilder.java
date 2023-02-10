@@ -13,15 +13,18 @@ public class pyramidBuilder {
         }
         int nFloors = scr.nextInt();
 
-        preciseFloorBuilder(nFloors);
+
+        System.out.println(towerBuilder(nFloors));
 
     }
 
-    public static void preciseFloorBuilder(int nFloors) {
+    public static StringBuilder towerBuilder(int nFloors) {
 
+        StringBuilder tower = new StringBuilder();
 
         for (int preciseFloor = 1; preciseFloor <= nFloors; preciseFloor++) {
 
+            StringBuilder towerFloor = new StringBuilder();
             int lastLine = 1 + (nFloors - 1) * 2;
             int spaceMax = (lastLine - 1) / 2;
             int preciseFloorSignAmount = 1 + (preciseFloor - 1) * 2;
@@ -29,23 +32,23 @@ public class pyramidBuilder {
 
 
             for (int i = 0; i < preciseFloorSpaceAmount; i++) {
-                System.out.print("-");
+                towerFloor.append(" ");
             }
 
             for (int k = 0; k < preciseFloorSignAmount; k++) {
-                System.out.print("*");
+                towerFloor.append("*");
             }
 
             for (int i = 0; i < preciseFloorSpaceAmount; i++) {
-                System.out.print("-");
+                towerFloor.append(" ");
             }
 
-            System.out.println();
+            towerFloor.append("\n");
 
-        }
+            tower.append(towerFloor);
 
+        } return tower;
     }
-
 }
 
 
