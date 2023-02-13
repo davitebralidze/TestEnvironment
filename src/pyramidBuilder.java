@@ -5,14 +5,20 @@ public class pyramidBuilder {
     public static void main(String[] args) {
 
         Scanner scr = new Scanner(System.in);
+        int nFloors;
 
-        System.out.println("Enter the height of the tree: ");
-        while (!scr.hasNextInt()) {
-            System.out.println("The height of the tree must be an integer. Please enter again: ");
-            scr.next();
-        }
-        int nFloors = scr.nextInt();
+        do {
+            System.out.println("Enter the height of the tree: ");
+            while (!scr.hasNextInt()) {
+                System.out.println("The height of the tree must be a positive integer. Please enter again: ");
+                scr.next();
+            }
+            nFloors = scr.nextInt();
 
+            if (nFloors < 1) {
+                System.out.println("The height of the tree must be a positive integer. Please enter again: ");
+            }
+        } while (nFloors < 1);
 
         System.out.println(towerBuilder(nFloors));
 
@@ -47,7 +53,8 @@ public class pyramidBuilder {
 
             tower.append(towerFloor);
 
-        } return tower;
+        }
+        return tower;
     }
 }
 
