@@ -45,10 +45,6 @@ public class pyramidBuilder {
                 towerFloor.append("*");
             }
 
-            for (int i = 0; i < preciseFloorSpaceAmount; i++) {
-                towerFloor.append(" ");
-            }
-
             towerFloor.append("\n");
 
             tower.append(towerFloor);
