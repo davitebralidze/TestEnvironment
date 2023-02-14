@@ -4,9 +4,11 @@ public class collatzConjecture {
 
     public static void main(String[] args) {
 
+
         Scanner scr = new Scanner(System.in);
         int startNum;
 
+        System.out.println("This program will print Collatz Conjecture");
         System.out.println("Please enter a positive integer: ");
 
         do {
