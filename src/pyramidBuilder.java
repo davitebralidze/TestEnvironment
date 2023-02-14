@@ -7,8 +7,10 @@ public class pyramidBuilder {
         Scanner scr = new Scanner(System.in);
         int nFloors;
 
+        System.out.println("Enter the height of the tree: ");
+
+
         do {
-            System.out.println("Enter the height of the tree: ");
             while (!scr.hasNextInt()) {
                 System.out.println("The height of the tree must be a positive integer. Please enter again: ");
                 scr.next();
@@ -53,9 +55,3 @@ public class pyramidBuilder {
         return tower;
     }
 }
-
-
-
-
-
-
