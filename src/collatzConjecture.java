@@ -6,13 +6,13 @@ public class collatzConjecture {
 
 
         Scanner scr = new Scanner(System.in);
-        int startNum;
+        long startNum;
 
         System.out.println("This program will print Collatz Conjecture");
         System.out.println("Please enter a positive integer: ");
 
         do {
-            while (!scr.hasNextInt()) {
+            while (!scr.hasNextLong()) {
                 System.out.println("Please enter a positive integer: ");
                 scr.next();
             }
