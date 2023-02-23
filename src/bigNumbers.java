@@ -20,7 +20,7 @@ public class bigNumbers {
             // when a is less than b, compareTo method returns -1
         } else if (a.compareTo(b) < 0) {
             System.out.println("A is less than B");
-
+            // when a is equal than b, compareTo method returns 0
         } else if (a.compareTo(b) == 0) {
             System.out.println("A and B are equal");
         }
