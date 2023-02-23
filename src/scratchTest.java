@@ -1,22 +1,22 @@
 import java.util.Scanner;
-
 public class scratchTest {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
+        double a;
 
-        int a = 5;
+        System.out.println("This condition stands before while loop: ");
 
-        System.out.println("Scanner:");
+        while (!scanner.hasNextDouble()) {
+            System.out.println("This condition is inside while loop: ");
+            scanner.next();
+        }
+        System.out.println("This condition is after while loop");
 
-        scanner.nextInt();
-
-        a = scanner.nextInt();
+        a = scanner.nextDouble();
 
         System.out.println(a);
-
-
 
     }
 }
