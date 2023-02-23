@@ -14,7 +14,7 @@ public class bigNumbers {
         BigDecimal b = scanner.nextBigDecimal();
 
 
-            // when a is bigger than b, compareTo method returns 1
+        // when a is bigger than b, compareTo method returns 1
         if (a.compareTo(b) > 0) {
             System.out.println("A is greater than B");
             // when a is less than b, compareTo method returns -1
