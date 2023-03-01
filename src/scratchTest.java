@@ -53,7 +53,7 @@ public class scratchTest {
 
 
 
-            case "^" -> y = a.pow(b.intValue());
+            case "^" -> y = BigDecimal.valueOf(Math.pow(a.doubleValue() , b.doubleValue()));
 
 
             case "v" -> {
