@@ -1,16 +1,13 @@
 import java.util.Scanner;
+
 public class scratchTest2 {
     public static void main(String[] args) {
 
-        Scanner scr = new Scanner(System.in);
+        double i = 5;
 
-        System.out.println("Enter a value: ");
+        i%=2;
 
-        int x = scr.nextInt();
-
-        System.out.println(x);
-
-
+        System.out.println(i);
 
 
     }
