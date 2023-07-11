@@ -7,7 +7,6 @@ public class bigNumbers {
 
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.println("Enter a value for a");
         BigDecimal a = scanner.nextBigDecimal();
         System.out.println("Enter a value for b");
