@@ -15,7 +15,7 @@ public class PasswordGenerator {
             int passwordLength = scanner.nextInt();
             System.out.println("Your password is " + CYAN + passwordGenerator(passwordLength));
         } catch (Exception WrongArgumentPassedException) {
-            System.out.println(RED + "The length of the password must be a positive integer!");
+            System.out.println(RED + "The length of the password must be an integer that is equal or more than 4!");
         }
 
     }
