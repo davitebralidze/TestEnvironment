@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class pyramidBuilder {
+public class PyramidBuilder {
 
     public static void main(String[] args) {
 

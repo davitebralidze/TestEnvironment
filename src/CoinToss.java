@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class coinToss {
+public class CoinToss {
 
     public static void main(String[] args) {
 

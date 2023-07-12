@@ -1,4 +1,4 @@
-public class ternaryOperator {
+public class TernaryOperator {
     public static void main(String[] args) {
 
         int num1 = 25;

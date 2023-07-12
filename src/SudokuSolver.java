@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class sudokuSolver {
+public class SudokuSolver {
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-public class switchCase {
+public class SwitchCase {
     public static void main(String[] args) {
 
         System.out.println(monthQuarter("JULY"));

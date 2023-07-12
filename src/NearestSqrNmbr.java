@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class nearestSqrNmbr {
+public class NearestSqrNmbr {
 
     public static void main(String[] args) {
 

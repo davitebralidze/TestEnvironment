@@ -2,7 +2,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class diceRoller {
+public class DiceRoller {
 
     public static void main(String[] args) {
 

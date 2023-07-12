@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.String;
 
-public class bracketBalancer {
+public class BracketBalancer {
 
     public static void main(String[] args) {
         String[] validSymbols = {"{", "}", "[", "]", "(", ")"};

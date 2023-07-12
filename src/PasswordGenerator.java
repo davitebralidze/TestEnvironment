@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class passwordGenerator {
+public class PasswordGenerator {
 
     public static void main(String[] args) {
 
@@ -9,7 +9,7 @@ public class passwordGenerator {
         System.out.println("Enter the length of the password: ");
         try {
             int passwordLength = scanner.nextInt();
-            System.out.println("Your password is " + passwordGenerator(passwordLength));
+            System.out.println("Your password is " +passwordGenerator(passwordLength));
         } catch (Exception WrongArgumentPassedException) {
             System.out.println("The length of the password must be a positive integer!");
         }
@@ -19,7 +19,7 @@ public class passwordGenerator {
     public static String passwordGenerator(int passwordLength) {
 
         if (passwordLength < 4) {
-            throw new IllegalArgumentException("Password length must be more than 4 characters.");
+            throw new IllegalArgumentException();
         }
 
         Random random = new Random();

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class stringRevert {
+public class StringRevert {
 
     public static void main(String[] args) {
 

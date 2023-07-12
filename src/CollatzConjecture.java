@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class collatzConjecture {
+public class CollatzConjecture {
 
     public static void main(String[] args) {
 
