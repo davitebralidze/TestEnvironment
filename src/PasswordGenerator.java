@@ -5,7 +5,7 @@ public class PasswordGenerator {
 
     public static void main(String[] args) {
 
-        final String RESET = "\u001B[0m";
+//        final String RESET = "\u001B[0m"; --> Reset is used to return the console text to its own original color
         final String CYAN = "\u001B[36m";
         final String RED = "\u001B[31m";
         Scanner scanner = new Scanner(System.in);
