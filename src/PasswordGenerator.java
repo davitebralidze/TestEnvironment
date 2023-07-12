@@ -9,6 +9,7 @@ public class PasswordGenerator {
         final String CYAN = "\u001B[36m";
         final String RED = "\u001B[31m";
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter the length of the password: ");
         try {
             int passwordLength = scanner.nextInt();
