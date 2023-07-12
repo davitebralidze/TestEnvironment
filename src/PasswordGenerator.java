@@ -5,13 +5,16 @@ public class PasswordGenerator {
 
     public static void main(String[] args) {
 
+        final String RESET = "\u001B[0m";
+        final String CYAN = "\u001B[36m";
+        final String RED = "\u001B[31m";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the length of the password: ");
         try {
             int passwordLength = scanner.nextInt();
-            System.out.println("Your password is " +passwordGenerator(passwordLength));
+            System.out.println("Your password is " + CYAN + passwordGenerator(passwordLength) + RESET);
         } catch (Exception WrongArgumentPassedException) {
-            System.out.println("The length of the password must be a positive integer!");
+            System.out.println(RED + "The length of the password must be a positive integer!");
         }
 
     }
