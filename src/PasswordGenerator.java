@@ -15,16 +15,15 @@ public class PasswordGenerator {
             int passwordLength = scanner.nextInt();
             System.out.println("Your password is " + CYAN + passwordGenerator(passwordLength));
         } catch (Exception WrongArgumentPassedException) {
-            System.out.println(RED + "The length of the password must be an integer that is equal or more than 4!");
+            System.out.println(RED + "The length of the password must be an integer that is between the range of 4 and 30");
         }
 
     }
 
     public static String passwordGenerator(int passwordLength) {
-
-        if (passwordLength < 4) {
-            throw new IllegalArgumentException();
-        }
+        if (passwordLength < 4 || passwordLength > 30) {
+                throw new IllegalArgumentException();
+            }
 
         Random random = new Random();
         StringBuilder generatedPassword = new StringBuilder();
