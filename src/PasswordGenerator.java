@@ -5,15 +5,15 @@ public class PasswordGenerator {
 
     public static void main(String[] args) {
 
-//        final String RESET = "\u001B[0m"; --> Reset is used to return the console text to its own original color
-        final String CYAN = "\u001B[36m";
+        final String RESET = "\u001B[0m";
+        final String YELLOW = "\u001B[33m";
         final String RED = "\u001B[31m";
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the length of the password: ");
         try {
             int passwordLength = scanner.nextInt();
-            System.out.println("Your password is " + CYAN + passwordGenerator(passwordLength));
+            System.out.println("Your password is " + YELLOW + passwordGenerator(passwordLength)+ RESET + ".");
         } catch (Exception WrongArgumentPassedException) {
             System.out.println(RED + "The length of the password must be an integer that is between the range of 4 and 30");
         }
