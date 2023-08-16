@@ -32,7 +32,7 @@ public class QRCodeGenerator {
         Random random = new Random();
 
         int randomID = random.nextInt(100000) + 1;
-        String fileName = "QRcode" + randomID;
+        String fileName = "QR" + randomID;
         ;
         String desktopPath = FileSystemView.getFileSystemView().getHomeDirectory() + "\\" + fileName + ".png";
         String GREEN = "\u001B[32m";
