@@ -26,8 +26,19 @@ public class QRCodeGenerator {
 
     public static String getDesktopPath() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the path of the desktop: ");
-        String desktopPath = scanner.next() + "\\qrcode.png";
+        String desktopPath;
+
+        do {
+            System.out.println("Please enter the path of the desktop: ");
+            desktopPath = scanner.nextLine() + "\\qrcode.png";
+
+            File desktopDirectory = new File(desktopPath).getParentFile();
+            if (desktopDirectory == null || !desktopDirectory.isDirectory()) {
+                System.out.println("Invalid desktop path. Please enter a valid path.");
+                desktopPath = null;
+            }
+        } while (desktopPath == null);
+
         return desktopPath;
     }
 
