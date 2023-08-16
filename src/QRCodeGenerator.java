@@ -40,6 +40,7 @@ public class QRCodeGenerator {
         String MAGENTA = "\u001B[35m";
         String CYAN = "\u001B[36m";
         String RESET = "\u001B[0m";
+        String YELLOW = "\u001B[33m";
         int width = 300;
         int height = 300;
 
@@ -56,7 +57,9 @@ public class QRCodeGenerator {
             File qrCodeFile = new File(desktopPath);
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
-            System.out.println(GREEN + "QR code has been generated successfully! The file is saved on the " + MAGENTA + "Desktop." + RESET + "\nFile name: " + CYAN + fileName);
+            System.out.println(GREEN + "QR code has been generated successfully! The file is saved on the " + MAGENTA + "Desktop." + RESET +
+                    "\nFile name: " + CYAN + fileName + YELLOW
+                    +"\nThe file will be opened automatically shortly");
 
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(qrCodeFile);
