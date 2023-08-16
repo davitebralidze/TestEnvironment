@@ -4,10 +4,12 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import javax.imageio.ImageIO;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class QRCodeGenerator {
@@ -27,10 +29,17 @@ public class QRCodeGenerator {
 
     public static void generateQR(String websiteUrl) {
 
-        String desktopPath = "C:\\Users\\User\\Downloads\\qrcode.png";
+        Random random = new Random();
+
+        int randomID = random.nextInt(100000) + 1;
+        String fileName = "QRcode" + randomID;
+        ;
+        String desktopPath = FileSystemView.getFileSystemView().getHomeDirectory() + "\\" + fileName + ".png";
         String GREEN = "\u001B[32m";
         String RED = "\u001B[31m";
         String MAGENTA = "\u001B[35m";
+        String CYAN = "\u001B[36m";
+        String RESET = "\u001B[0m";
         int width = 300;
         int height = 300;
 
@@ -47,7 +56,7 @@ public class QRCodeGenerator {
             File qrCodeFile = new File(desktopPath);
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
-            System.out.println(GREEN + "QR code generated successfully! The file is saved in the " + MAGENTA+ "Downloads" + GREEN + " folder");
+            System.out.println(GREEN + "QR code has been generated successfully! The file is saved on the " + MAGENTA + "Desktop." + RESET + "\nFile name: " + CYAN + fileName);
 
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(qrCodeFile);
