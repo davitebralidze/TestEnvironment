@@ -22,7 +22,7 @@ public class QRCodeGenerator {
     public static String getURL() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the URL you want to represent as QR code: ");
-        String URL = scanner.next();
+        String URL = scanner.nextLine();
         return URL;
     }
 
@@ -33,7 +33,6 @@ public class QRCodeGenerator {
 
         int randomID = random.nextInt(100000) + 1;
         String fileName = "QR" + randomID;
-        ;
         String desktopPath = FileSystemView.getFileSystemView().getHomeDirectory() + "\\" + fileName + ".png";
         String GREEN = "\u001B[32m";
         String RED = "\u001B[31m";
@@ -58,8 +57,7 @@ public class QRCodeGenerator {
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
             System.out.println(GREEN + "QR code has been generated successfully! The file is saved on the " + MAGENTA + "Desktop." + RESET +
-                    "\nFile name: " + CYAN + fileName + YELLOW
-                    +"\nThe file will be opened automatically shortly");
+                    "\nFile name: " + CYAN + fileName + YELLOW + "\nThe file will be opened automatically shortly");
 
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(qrCodeFile);
