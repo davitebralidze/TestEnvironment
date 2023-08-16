@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class QRCodeGenerator {
     public static void main(String[] args) {
 
-        generateQR(getURL(), getDesktopPath());
+        generateQR(getURL());
 
     }
 
@@ -24,28 +24,13 @@ public class QRCodeGenerator {
         return URL;
     }
 
-    public static String getDesktopPath() {
-        Scanner scanner = new Scanner(System.in);
-        String desktopPath;
 
-        do {
-            System.out.println("Please enter the path of the desktop: ");
-            desktopPath = scanner.nextLine() + "\\qrcode.png";
+    public static void generateQR(String websiteUrl) {
 
-            File desktopDirectory = new File(desktopPath).getParentFile();
-            if (desktopDirectory == null || !desktopDirectory.isDirectory()) {
-                System.out.println("Invalid desktop path. Please enter a valid path.");
-                desktopPath = null;
-            }
-        } while (desktopPath == null);
-
-        return desktopPath;
-    }
-
-    public static void generateQR(String websiteUrl, String desktopPath) {
-
+        String desktopPath = "C:\\Users\\User\\Downloads\\qrcode.png";
         String GREEN = "\u001B[32m";
         String RED = "\u001B[31m";
+        String MAGENTA = "\u001B[35m";
         int width = 300;
         int height = 300;
 
@@ -62,7 +47,7 @@ public class QRCodeGenerator {
             File qrCodeFile = new File(desktopPath);
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
-            System.out.println(GREEN + "QR code generated successfully!");
+            System.out.println(GREEN + "QR code generated successfully! The file is saved in the " + MAGENTA+ "Downloads" + GREEN + " folder");
 
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(qrCodeFile);
@@ -73,7 +58,5 @@ public class QRCodeGenerator {
         } catch (WriterException | IOException e) {
             e.printStackTrace();
         }
-
     }
-
 }
