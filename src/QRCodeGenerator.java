@@ -8,15 +8,30 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class QRCodeGenerator {
     public static void main(String[] args) {
 
-        generateQR("https://www.google.com", "C:\\Users\\User\\OneDrive - Flat Rock Technology\\Desktop\\qrCode.PNG");
+        generateQR(getURL(), getDesktopPath());
 
     }
 
-    public static void generateQR(String websiteUrl, String qrCodeFilePath) {
+    public static String getURL() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the URL: ");
+        String URL = scanner.next();
+        return URL;
+    }
+
+    public static String getDesktopPath() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the path of the desktop: ");
+        String desktopPath = scanner.next() + "\\qrcode.png";
+        return desktopPath;
+    }
+
+    public static void generateQR(String websiteUrl, String desktopPath) {
 
         int width = 300;
         int height = 300;
@@ -31,7 +46,7 @@ public class QRCodeGenerator {
                 }
             }
 
-            File qrCodeFile = new File(qrCodeFilePath);
+            File qrCodeFile = new File(desktopPath);
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
             System.out.println("QR code generated successfully!");
