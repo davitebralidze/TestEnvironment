@@ -19,7 +19,7 @@ public class QRCodeGenerator {
 
     public static String getURL() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the URL: ");
+        System.out.println("Please enter the URL you want to represent as QR code: ");
         String URL = scanner.next();
         return URL;
     }
@@ -33,6 +33,8 @@ public class QRCodeGenerator {
 
     public static void generateQR(String websiteUrl, String desktopPath) {
 
+        String GREEN = "\u001B[32m";
+        String RED = "\u001B[31m";
         int width = 300;
         int height = 300;
 
@@ -49,12 +51,12 @@ public class QRCodeGenerator {
             File qrCodeFile = new File(desktopPath);
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
-            System.out.println("QR code generated successfully!");
+            System.out.println(GREEN + "QR code generated successfully!");
 
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(qrCodeFile);
             } else {
-                System.out.println("Desktop integration not supported.");
+                System.out.println(RED + "Desktop integration not supported.");
             }
 
         } catch (WriterException | IOException e) {
