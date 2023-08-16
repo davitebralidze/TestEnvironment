@@ -12,8 +12,11 @@ import java.io.IOException;
 public class QRCodeGenerator {
     public static void main(String[] args) {
 
-        String websiteUrl = "https://google.com";
-        String qrCodeFilePath = "C:\\Users\\User\\OneDrive - Flat Rock Technology\\Desktop\\qrcode.png";
+        generateQR("https://www.google.com", "C:\\Users\\User\\OneDrive - Flat Rock Technology\\Desktop\\qrCode.PNG");
+
+    }
+
+    public static void generateQR(String websiteUrl, String qrCodeFilePath) {
 
         int width = 300;
         int height = 300;
@@ -42,5 +45,7 @@ public class QRCodeGenerator {
         } catch (WriterException | IOException e) {
             e.printStackTrace();
         }
+
     }
+
 }
