@@ -57,7 +57,7 @@ public class QRCodeGenerator {
             ImageIO.write(qrCodeImage, "PNG", qrCodeFile);
 
             System.out.println(GREEN + "QR code has been generated successfully! The file is saved on the " + MAGENTA + "Desktop." + RESET +
-                    "\nFile name: " + CYAN + fileName + YELLOW + "\nThe file will be opened automatically shortly");
+                    "\nFile name: " + CYAN + fileName + YELLOW + "\nThe file will be opened automatically");
 
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(qrCodeFile);
